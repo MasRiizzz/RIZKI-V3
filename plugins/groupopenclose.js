@@ -17,9 +17,9 @@ ${usedPrefix}${command} close`)
   }
 }
 
-handler.help = ['group open', 'group close']
+handler.help = ['group *open / close*']
 handler.tags = ['group']
-handler.command = ['group']
+handler.command = ['group', 'grup']
 handler.botAdmin = true
 handler.group = true
 handler.admin = true
