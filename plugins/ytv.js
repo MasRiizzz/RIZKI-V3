@@ -17,7 +17,7 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
   catch (e) { }
   if (!isLimit) {
     buf = await conn.getBuffer(dl_link)
-    conn.sendMessage(m.chat, {document:buf, mimetype: 'video/mp4', fileName:`${title}.mp4`}, {quoted:m})
+    conn.sendFile(m.chat, buf, '', wm, m)
   }
 }
 handler.help = ['ytmp4 <url>']
