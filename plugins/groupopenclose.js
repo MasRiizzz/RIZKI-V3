@@ -1,4 +1,9 @@
 handler = (m, {conn,text,usedPrefix,command}) => {
+  if (!text) throw '- untuk membuka group:
+${usedPrefix}${command} open
+
+- untuk menutup group:
+${usedPrefix}${command} close'
   switch (text.toLowerCase()) {
     case 'open':  
       await conn.groupSettingUpdate(m.chat, 'not_announcement')
