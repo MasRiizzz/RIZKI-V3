@@ -1,4 +1,5 @@
 const { sticker1, sticker5 } = require('../lib/sticker')
+const { writeExifVid } = require('../lib/exif')
 
 let handler = async (m, { conn, text }) => {
     ggi = {
@@ -29,7 +30,7 @@ let handler = async (m, { conn, text }) => {
             if ((q.msg || q).seconds > 10) return m.reply('max is 10 seconds!')
             let img = await q.download()
             if (!img) throw `balas stiker dengan perintah ${usedPrefix + command} <packname>|<author>`
-            stiker = await sticker5(img, false, packname || '', author || '')
+            stiker = await writeExifVid(img, {packname: packname || '', author: author || ''})
         } else if (m.quoted.text) {
             if (isUrl(m.quoted.text)) stiker = await sticker(false, m.quoted.text, packname || '', author || '')
             else throw 'URL is not valid! end with jpg/gif/png'
