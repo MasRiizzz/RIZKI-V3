@@ -28,10 +28,8 @@ global.APIKeys = { // APIKey Here
 
 // Sticker WM
 global.stiker_wait = 'Stiker sedang dibuat'
-global.packname = `🐀  🎀  𝓅𝓊𝓃𝓎𝒶 𝒶𝓃𝓉𝓊𝓂  🎀  🐀
-🐀  🎀  𝒶𝓃𝓉𝓊𝓂 𝓅𝓊𝓃𝓎𝒶  🎀  🐀
-🐀  🎀  𝓅𝓊𝓃𝓎𝒶 𝒶𝓃𝓉𝓊𝓂 𝓁𝒶𝒽  🎀  🐀`
-global.author = ''
+global.packname = ``
+global.author = '🌹 ZaBot-MD 🌹'
 global.email = 'ozan6825@hotmail'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=runner-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.wm = '© ZaBot-MD'
