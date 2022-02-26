@@ -8,7 +8,7 @@ let handler = async (m, { conn }) => {
             "participant": "0@s.whatsapp.net"
         },
         "message": {
-            "conversation": `_*${m.name}*_ ? _*${m.name}*_ : 'no name'`,
+            "conversation": m.name,
         }
     }
     let stiker = false
