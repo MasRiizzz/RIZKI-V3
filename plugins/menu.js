@@ -4,6 +4,7 @@ let path = require('path')
 let levelling = require('../lib/levelling')
 let tags = {
   'main': 'MENU UTAMA',
+  'maker': 'MENU MAKER',
   'game': 'MENU GAME',
   'rpg': 'MENU RPG',
   'xp': 'MENU EXP',
@@ -14,7 +15,6 @@ let tags = {
   'owner': 'MENU OWNER',
   'fun': 'MENU FUN',
   'sticker': 'MENU STICKER',
-  'maker': 'MENU MAKER',
   'github': 'MENU GITHUB',
   'internet': 'INTERNET',
   'kerang': 'MENU KERANG',
