@@ -489,26 +489,21 @@ module.exports = {
         let text = ''
         switch (action) {
             case 'add':
-case 'remove':
-if (chat.welcome) {
-	let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
-	for (let user of participants) {
-		try {
-			pp = this.profilePictureUrl(user, 'image')
-		} catch {
-			pp = 'https://divedigital.id/wp-content/uploads/2021/10/1-min.png'
-		}
-		if (action == 'add') {
-			buf = `https://api.dapuhy.xyz/api/canvas/welcome3?name=${this.getName(user)}&gcname=${groupMetadata.subject}&member=${participants.lenght}&pp=${pp}&bg=https://i.postimg.cc/Kc0ChTtc/31367.jpg&apikey=4oYjiJ6vJr`
-			this.sendFile(id, buf, '', '', null, false, {mentions: [user] })
-		}
-		if (action == 'remove') {
-			buff = `https://api.dapuhy.xyz/api/canvas/goodbye?name=${this.getName(user)}&gcname=${groupMetadata.subject}&ppgc=${this.profilePictureUrl(groupMetadata.id, 'image')}&pp=${pp}&bg=https://i.ibb.co/tYgwwT2/images-2.jpg&apikey=4oYjiJ6vJr`
-			this.sendFile(id, buff, '', '', null, false, { mentions: [user] })
-		}
-	}
-}
-break
+            case 'remove':
+                if (chat.welcome) {
+                    let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
+                    for (let user of participants) {
+                        let pp = './src/avatar_contact.png'
+                        try {
+                            pp = await this.profilePictureUrl(user, 'image')
+                        } catch (e) {} finally {
+                            text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', groupMetadata.subject).replace('@desc', groupMetadata.desc) :
+                                (chat.sBye || this.bye || conn.bye || 'Bye, @user !')).replace('@user', '@' + user.split('@')[0])
+                            this.sendFile(id, pp, 'pp.jpg', text, null, false,{ contextInfo: { mentionedJid: [user] }})
+                        }
+                    }
+                }
+                break
             case 'promote':
                 text = (chat.sPromote || this.spromote || conn.spromote || '@user ```is now Admin```')
             case 'demote':
