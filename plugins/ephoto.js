@@ -58,7 +58,7 @@ ArtPaperCut
     if (!teks) return conn.reply(m.chat, 'Uhm... Teksnya?', m)
 
   await m.reply('Sedang membuat...')
- let hasil = await `https://api.dapuhy.xyz/api/ephoto/${effect}?text=${teks}&apikey=4oYjiJ6vJr`
+ let hasil = await conn.getBuffer(`https://api.dapuhy.xyz/api/ephoto/${effect}?text=${teks}&apikey=4oYjiJ6vJr`)
  let caption = `*ephoto*\n\nEffect : ${effect}`
 
     conn.sendFile(m.chat, hasil, '', caption, m)
