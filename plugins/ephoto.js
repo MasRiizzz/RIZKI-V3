@@ -51,17 +51,6 @@ Galaxy
 GalaxyBat
 BrokenGlass
 ArtPaperCut
-PaulScholes
-Tiktok
-Avengers
-3DWood
-Graffiti4
-Graffiti6
-MultiColor3D
-RealisticVintage
-Pornhub
-Juventus
-CaptainAmerica
 `.trim()
 
 
