@@ -499,11 +499,11 @@ if (chat.welcome) {
 			pp = 'https://divedigital.id/wp-content/uploads/2021/10/1-min.png'
 		}
 		if (action == 'add') {
-			buf = await this.getBuffer(`https://api.dapuhy.xyz/api/canvas/welcome3?name=${this.getName(user)}&gcname=${groupMetadata.subject}&member=${participants.lenght}&pp=${pp}&bg=https://i.postimg.cc/Kc0ChTtc/31367.jpg&apikey=4oYjiJ6vJr`)
+			buf = `https://api.dapuhy.xyz/api/canvas/welcome3?name=${this.getName(user)}&gcname=${groupMetadata.subject}&member=${participants.lenght}&pp=${pp}&bg=https://i.postimg.cc/Kc0ChTtc/31367.jpg&apikey=4oYjiJ6vJr`
 			this.sendFile(id, buf, '', '', null, false, {mentions: [user] })
 		}
 		if (action == 'remove') {
-			buff = await this.getBuffer(`https://api.dapuhy.xyz/api/canvas/goodbye?name=${this.getName(user)}&gcname=${groupMetadata.subject}&ppgc=${this.profilePictureUrl(groupMetadata.id, 'image')}&pp=${pp}&bg=https://i.ibb.co/tYgwwT2/images-2.jpg&apikey=4oYjiJ6vJr`)
+			buff = `https://api.dapuhy.xyz/api/canvas/goodbye?name=${this.getName(user)}&gcname=${groupMetadata.subject}&ppgc=${this.profilePictureUrl(groupMetadata.id, 'image')}&pp=${pp}&bg=https://i.ibb.co/tYgwwT2/images-2.jpg&apikey=4oYjiJ6vJr`
 			this.sendFile(id, buff, '', '', null, false, { mentions: [user] })
 		}
 	}
